@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common'; // <-- Add this line
+import { Team } from './team.model';
 
 @Component({
   selector: 'app-root',
@@ -35,6 +36,52 @@ export class AppComponent {
   };
   teamArray = []
 
+  teamsleft: Team[] = [
+    new Team("UConn", 1, 0),
+    new Team("Stetson", 16, 0),
+    new Team("FAU", 8, 0),
+    new Team("Northwestern", 9, 0),
+    new Team("San Diego State", 5, 0),
+    new Team("UAB", 12, 0),
+    new Team("Auburn", 4, 0),
+    new Team("Yale", 13, 0),
+    new Team("BYU", 6, 0),
+    new Team("Duquesne", 11, 0),
+    new Team("Illinois", 3, 0),
+    new Team("Morehead State", 14, 0),
+    new Team("Washington", 7, 0),
+    new Team("Drake", 10, 0),
+    new Team("Iowa State", 2, 0),
+    new Team("South Dakota State", 15, 0)
+  ];
+
+  teamsright: Team[] = [
+    new Team("Houston", 1, 0),
+    new Team ("Longwood", 16, 0),
+    new Team ("Nebreska", 8, 0),
+    new Team ("Texas AM", 9, 0),
+    new Team ("Wisconsin", 5, 0),
+    new Team ("James Madison", 12, 0),
+    new Team ("Duke", 4, 0),
+    new Team ("Vermont", 13, 0),
+    new Team ("Texas Tech", 6, 0),
+    new Team ("NC State", 11, 0),
+    new Team ("Kentucky", 3, 0),
+    new Team ("Oakland", 14, 0),
+    new Team ("Florida", 7, 0),
+    new Team ("PLACEHOLDER", 10, 0),
+    new Team ("Marquette", 2, 0),
+    new Team ("Western Kentucky", 15, 0)
+  ];
+
   objectKeys = Object.keys;
+
+  //gets keys of the team
+  a(team: any) {
+    return Object.keys(team);
+  }
+
+
+  //end class def
 }
 
