@@ -12,11 +12,28 @@ import { CommonModule } from '@angular/common'; // <-- Add this line
 export class AppComponent {
   title = 'hello-world';
   test = "ASDL:FKHASD:KFHDSA";
+  roundNumber = 0;
   //I want to initialize a dictionary here
-  myDictionary: { [key: string]: any } = {
-    "bruh": 1,
-    "yeet": 2
+  leftSide: { [key: string]: any } = {
+    "UConn": 1,
+    "Stetson": 16,
+    "FAU": 8,
+    "Northwestern": 9,
+    "San Diego State": 5,
+    "UAB": 12,
+    "Auburn": 4,
+    "Yale": 13,
+    "BYU": 6,
+    "Duquesne": 11,
+    "Illinois": 3,
+    "Morehead State": 14,
+    "Washington": 7,
+    "Drake": 10,
+    "Iowa State": 2,
+    "South Dakota State": 15
+
   };
+  teamArray = []
 
   objectKeys = Object.keys;
 }
