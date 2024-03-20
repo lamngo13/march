@@ -52,7 +52,25 @@ export class AppComponent {
     new Team("Washington", 7, 0),
     new Team("Drake", 10, 0),
     new Team("Iowa State", 2, 0),
-    new Team("South Dakota State", 15, 0)
+    new Team("South Dakota State", 15, 0),
+
+    //now for the next one
+    new Team("UNC", 1, 0),
+    new Team("Wagner", 16, 0),
+    new Team("Mississippi State", 8, 0),
+    new Team("Michigan State", 9, 0),
+    new Team("Saint Mary's", 5, 0),
+    new Team("Grand Canyon", 12, 0),
+    new Team("Alabama", 4, 0),
+    new Team("Charleston", 13, 0),
+    new Team("Clemson", 6, 0),
+    new Team("New Mexico", 11, 0),
+    new Team("Bayor", 3, 0),
+    new Team("Colgate", 14, 0),
+    new Team("Dayton", 7, 0),
+    new Team("Neveda", 10, 0),
+    new Team("Arizona", 2, 0),
+    new Team("Long Beach State", 15, 0),
   ];
 
   teamsright: Team[] = [
@@ -69,9 +87,27 @@ export class AppComponent {
     new Team ("Kentucky", 3, 0),
     new Team ("Oakland", 14, 0),
     new Team ("Florida", 7, 0),
-    new Team ("PLACEHOLDER", 10, 0),
+    new Team ("PLACEHOLDER1", 10, 0),
     new Team ("Marquette", 2, 0),
-    new Team ("Western Kentucky", 15, 0)
+    new Team ("Western Kentucky", 15, 0),
+
+    //more teams
+    new Team("Purdue", 1, 0),
+    new Team("PLACEHOLDER2", 16, 0),
+    new Team("Utah State", 8, 0),
+    new Team("TCU", 9, 0),
+    new Team("Gonzaga", 5, 0),
+    new Team("McNesse", 12, 0),
+    new Team("Kansas", 4, 0),
+    new Team("Samford", 13, 0),
+    new Team("South Carolina", 6, 0),
+    new Team("Oregon", 11, 0),
+    new Team("Creighton", 3, 0),
+    new Team("Akron", 14, 0),
+    new Team("Texas", 7, 0),
+    new Team("PLACEHOLDER3", 10, 0),
+    new Team("Tennessee", 2, 0),
+    new Team("Saint Peters", 15, 0)
   ];
 
   objectKeys = Object.keys;
