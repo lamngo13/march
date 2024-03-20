@@ -81,6 +81,56 @@ export class AppComponent {
     return Object.keys(team);
   }
 
+  //first round, this MIGHT be universal
+  /*
+  toggleSelected(team: Team, isLeftSide: boolean): void {
+    // Reset selected state for all teams
+    this.teamsleft.forEach(t => t.aselected = false);
+    this.teamsright.forEach(t => t.aselected = false);
+
+    // Set selected state for the clicked team
+    team.aselected = true;
+
+    // Set selected state for the other team in the pair
+    if (isLeftSide) {
+      const index = this.teamsleft.indexOf(team);
+      this.teamsright[index].aselected = false;
+    } else {
+      const index = this.teamsright.indexOf(team);
+      this.teamsleft[index].aselected = false;
+    }
+  }
+  */
+ // bracket.component.ts
+
+// bracket.component.ts
+
+// bracket.component.ts
+
+toggleSelected(team: Team, isLeftSide: boolean): void {
+  const teams = isLeftSide ? this.teamsleft : this.teamsright;
+  
+  // If the clicked team is already selected, deselect it
+  if (team.aselected) {
+    team.aselected = false;
+  } else {
+    // Deselect the previously selected team from the same pair, if any
+    const pairIndex = teams.indexOf(team);
+    if (pairIndex !== -1) {
+      const otherTeamIndex = pairIndex % 2 === 0 ? pairIndex + 1 : pairIndex - 1;
+      if (otherTeamIndex >= 0 && otherTeamIndex < teams.length) {
+        teams[otherTeamIndex].aselected = false;
+      }
+    }
+    
+    // Select the clicked team
+    team.aselected = true;
+  }
+}
+
+
+
+
 
   //end class def
 }

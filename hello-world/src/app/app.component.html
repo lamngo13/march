@@ -7,42 +7,54 @@
 -->
 
 <!--
+
+
 <div class="bracket">
+
   <div class="round">
-    <div class="match" *ngFor="let team of teamsleft">
-      <div class="team">{{ team.name }}</div>
+    <div class="match">
+      <div class="team" *ngFor="let team of teamsleft; let i = index">
+        {{ team.name }}
+
+        <div class="spacer" *ngIf="i % 2 !== 0"></div>
+      </div>
     </div>
   </div>
   
 
   <div class="round">
-    <div class="match" *ngFor="let team of teamsright">
-      <div class="team">{{ team.name }}</div>
+    <div class="match">
+      <div class="team" *ngFor="let team of teamsright; let i = index">
+        {{ team.name }}
+        <div class="spacer" *ngIf="i % 2 !== 0"></div>
+      </div>
     </div>
   </div>
 </div>
 -->
+
 <div class="bracket">
   <!-- Left Side Teams -->
   <div class="round">
     <div class="match">
-      <div class="team" *ngFor="let team of teamsleft; let i = index">
+      <button class="team" 
+              *ngFor="let team of teamsleft; let i = index"
+              [class.selected]="team.aselected" 
+              (click)="toggleSelected(team, true)">
         {{ team.name }}
-        <!-- Add an empty team div for every other team -->
-        <div class="spacer" *ngIf="i % 2 !== 0"></div>
-      </div>
+      </button>
     </div>
   </div>
   
   <!-- Right Side Teams -->
   <div class="round">
     <div class="match">
-      <div class="team" *ngFor="let team of teamsright; let i = index">
+      <button class="team" 
+              *ngFor="let team of teamsright; let i = index"
+              [class.selected]="team.aselected" 
+              (click)="toggleSelected(team, false)">
         {{ team.name }}
-        <!-- Add an empty team div for every other team -->
-        <div class="spacer" *ngIf="i % 2 !== 0"></div>
-      </div>
+      </button>
     </div>
   </div>
 </div>
-

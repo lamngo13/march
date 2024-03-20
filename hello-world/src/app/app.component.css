@@ -36,3 +36,24 @@
   .spacer {
     height: 10px; /* Set height to create spacing between pairs of teams */
   }
+
+  .team.selected {
+    background-color: green; /* Set background color to green for selected teams */
+    color: white; /* Set text color to white for selected teams */
+  }
+  
+  /* Style for unselected teams */
+  .team:not(.selected) {
+    background-color: rgb(173, 118, 118); /* Set background color to red for unselected teams */
+    color: white; /* Set text color to white for unselected teams */
+  }
+  
+  /* Additional styling for the buttons */
+  .team {
+    width: 120px; /* Set width of the button */
+    height: 40px; /* Set height of the button */
+    margin-bottom: 5px; /* Add margin between buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Set cursor to pointer on hover */
+  }
