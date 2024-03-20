@@ -1,59 +1,58 @@
-/* bracket.component.css */
-
-/* Style for the bracket container */
-.bracket {
-    display: flex; /* Display as flexbox */
-    justify-content: space-between; /* Evenly space left and right sides */
+/* Styles for team sets */
+.team-set {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
   }
   
-  /* Style for each side of the bracket */
-  .round {
-    flex: 1; /* Grow to fill available space */
-    padding: 10rem; /* Add padding around each side */
+  .teamsleft {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
   
-  /* Style for each match */
-  .match {
-    margin-bottom: 1rem; /* Add margin between matches */
+  .teamsleft1 {
+    left: 25%;
+    top: 50%;
+    transform: translateY(-50%);
   }
   
-  /* Style for each team */
+  /* Additional styles for teamsleft2, teamsleft3, teamsleft4, teamsleft5 */
+  
+  .teamsright {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .teamsright1 {
+    right: 25%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Additional styles for teamsright2, teamsright3, teamsright4, teamsright5 */
+  
+  /* Styles for teams */
   .team {
-    width: 100px; /* Set width of team box */
-    height: 30px; /* Set height of team box */
-    background-color: lightgray; /* Set background color of team box */
-    border: 1px solid gray; /* Set border around team box */
-    display: flex; /* Display as flexbox */
-    align-items: center; /* Center team name vertically */
-    justify-content: center; /* Center team name horizontally */
-    margin-bottom: 5px; /* Add margin between teams */
+    width: 120px;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid black;
   }
   
-  .match .team:nth-child(even) {
-    margin-bottom: 4rem; /* Add margin between pairs of teams */
-  }
-
-  .spacer {
-    height: 10px; /* Set height to create spacing between pairs of teams */
-  }
-
-  .team.selected {
-    background-color: green; /* Set background color to green for selected teams */
-    color: white; /* Set text color to white for selected teams */
+  /* Styles for the bracket container */
+  .bracket {
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
   
-  /* Style for unselected teams */
-  .team:not(.selected) {
-    background-color: rgb(173, 118, 118); /* Set background color to red for unselected teams */
-    color: white; /* Set text color to white for unselected teams */
+  /* Styles for the champion */
+  .champion {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
-  /* Additional styling for the buttons */
-  .team {
-    width: 120px; /* Set width of the button */
-    height: 40px; /* Set height of the button */
-    margin-bottom: 5px; /* Add margin between buttons */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Add border radius */
-    cursor: pointer; /* Set cursor to pointer on hover */
-  }

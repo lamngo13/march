@@ -1,0 +1,59 @@
+/* bracket.component.css */
+
+/* Style for the bracket container */
+.bracket {
+    display: flex; /* Display as flexbox */
+    justify-content: space-between; /* Evenly space left and right sides */
+  }
+  
+  /* Style for each side of the bracket */
+  .round {
+    flex: 1; /* Grow to fill available space */
+    padding: 10rem; /* Add padding around each side */
+  }
+  
+  /* Style for each match */
+  .match {
+    margin-bottom: 1rem; /* Add margin between matches */
+  }
+  
+  /* Style for each team */
+  .team {
+    width: 100px; /* Set width of team box */
+    height: 30px; /* Set height of team box */
+    background-color: lightgray; /* Set background color of team box */
+    border: 1px solid gray; /* Set border around team box */
+    display: flex; /* Display as flexbox */
+    align-items: center; /* Center team name vertically */
+    justify-content: center; /* Center team name horizontally */
+    margin-bottom: 5px; /* Add margin between teams */
+  }
+  
+  .match .team:nth-child(even) {
+    margin-bottom: 4rem; /* Add margin between pairs of teams */
+  }
+
+  .spacer {
+    height: 10px; /* Set height to create spacing between pairs of teams */
+  }
+
+  .team.selected {
+    background-color: green; /* Set background color to green for selected teams */
+    color: white; /* Set text color to white for selected teams */
+  }
+  
+  /* Style for unselected teams */
+  .team:not(.selected) {
+    background-color: rgb(173, 118, 118); /* Set background color to red for unselected teams */
+    color: white; /* Set text color to white for unselected teams */
+  }
+  
+  /* Additional styling for the buttons */
+  .team {
+    width: 120px; /* Set width of the button */
+    height: 40px; /* Set height of the button */
+    margin-bottom: 5px; /* Add margin between buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Set cursor to pointer on hover */
+  }

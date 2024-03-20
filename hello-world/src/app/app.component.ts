@@ -110,7 +110,7 @@ export class AppComponent {
     new Team("Saint Peters", 15, 0)
   ];
 
-  teamsleft2: Team[] = [
+  teamsleft1: Team[] = [
     new Team("Placeholder4", 1, 0),
     new Team("Placeholder5", 1, 0),
     new Team("Placeholder6", 1, 0),
@@ -128,7 +128,8 @@ export class AppComponent {
     new Team("Placeholder18", 1, 0),
     new Team("Placeholder19", 1, 0)
   ];
-  teamsleft3: Team[] = [
+
+  teamsleft2: Team[] = [
     new Team("Placeholder20", 1, 0),
     new Team("Placeholder21", 1, 0),
     new Team("Placeholder22", 1, 0),
@@ -139,14 +140,14 @@ export class AppComponent {
     new Team("Placeholder27", 1, 0)
 
   ];
-  teamsleft4: Team[] = [
+  teamsleft3: Team[] = [
     new Team("Placeholder28", 1, 0),
     new Team("Placeholder29", 1, 0),
     new Team("Placeholder30", 1, 0),
     new Team("Placeholder31", 1, 0)
   ];
 
-  teamsright2: Team[] = [
+  teamsright1: Team[] = [
     new Team("Placeholder32", 1, 0),
     new Team("Placeholder33", 1, 0),
     new Team("Placeholder34", 1, 0),
@@ -165,7 +166,7 @@ export class AppComponent {
     new Team("Placeholder47", 1, 0)
   ];
 
-  teamsright3: Team[] = [
+  teamsright2: Team[] = [
     new Team("Placeholder48", 1, 0),
     new Team("Placeholder49", 1, 0),
     new Team("Placeholder50", 1, 0),
@@ -177,19 +178,19 @@ export class AppComponent {
 
   ];
 
-  teamsright4: Team[] = [
+  teamsright3: Team[] = [
     new Team("Placeholder56", 1, 0),
     new Team("Placeholder57", 1, 0),
     new Team("Placeholder58", 1, 0),
     new Team("Placeholder59", 1, 0)
   ];
 
-  teamsright5: Team[] = [
+  teamsright4: Team[] = [
     new Team("Placeholder62", 1, 0),
     new Team("Placeholder63", 1, 0),
   ];
 
-  teamsleft5: Team[] = [
+  teamsleft4: Team[] = [
     new Team("Placeholder60", 1, 0),
     new Team("Placeholder61", 1, 0),
   ];

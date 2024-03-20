@@ -1,40 +1,7 @@
-<!--
-  <p>hello adsf</p>
-  <p>{{ test }}</p>
-  <div *ngFor="let team of teamsleft">
-    <p>{{ team.name }}</p>
-  </div>
--->
+
 
 <!--
-
-
 <div class="bracket">
-
-  <div class="round">
-    <div class="match">
-      <div class="team" *ngFor="let team of teamsleft; let i = index">
-        {{ team.name }}
-
-        <div class="spacer" *ngIf="i % 2 !== 0"></div>
-      </div>
-    </div>
-  </div>
-  
-
-  <div class="round">
-    <div class="match">
-      <div class="team" *ngFor="let team of teamsright; let i = index">
-        {{ team.name }}
-        <div class="spacer" *ngIf="i % 2 !== 0"></div>
-      </div>
-    </div>
-  </div>
-</div>
--->
-
-<div class="bracket">
-  <!-- Left Side Teams -->
   <div class="round">
     <div class="match">
       <button class="team" 
@@ -46,7 +13,7 @@
     </div>
   </div>
   
-  <!-- Right Side Teams -->
+
   <div class="round">
     <div class="match">
       <button class="team" 
@@ -58,3 +25,46 @@
     </div>
   </div>
 </div>
+-->
+
+
+
+<!-- bracket.component.html -->
+
+<div class="bracket">
+  <!-- Left Side Teams -->
+  <div class="team-set teamsleft">
+    <!-- Teams Left -->
+    <div class="team" *ngFor="let team of teamsleft">
+      {{ team.name }}
+    </div>
+  </div>
+  <div class="team-set teamsleft1">
+    <!-- Teams Left 1 -->
+    <div class="team" *ngFor="let team of teamsleft1">
+      {{ team.name }}
+    </div>
+  </div>
+  <!-- Additional sets for teamsleft2, teamsleft3, teamsleft4, teamsleft5 -->
+
+  <!-- Right Side Teams -->
+  <div class="team-set teamsright1">
+    <!-- Teams Right 1 -->
+    <div class="team" *ngFor="let team of teamsright1">
+      {{ team.name }}
+    </div>
+  </div>
+  <div class="team-set teamsright">
+    <!-- Teams Right -->
+    <div class="team" *ngFor="let team of teamsright">
+      {{ team.name }}
+    </div>
+  </div>
+  <!-- Additional sets for teamsright2, teamsright3, teamsright4, teamsright5 -->
+
+  <!-- Champion -->
+  <div class="champion">
+    <div class="team">{{ champion.name }}</div>
+  </div>
+</div>
+
