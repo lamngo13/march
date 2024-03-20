@@ -1,41 +1,37 @@
-/* bracket.component.css */
-
-/* Container for each team */
-.team-container {
+/* Styles for team sets */
+.team-set {
+  position: absolute;
   display: flex;
   flex-direction: column;
 }
 
-/* Style for each team */
+.teamsleft {
+  left: 0;
+}
+
+.teamsleft1 {
+  left: 12.5%;
+}
+
+.teamsright {
+  right: 0;
+}
+
+.teamsright1 {
+  right: 12.5%;
+}
+
+/* Styles for teams */
 .team {
   width: 120px;
   height: 40px;
   margin-bottom: 10px;
-  border: 1px solid #000;
+  border: 1px solid black;
 }
 
-/* Style for the bracket container */
+/* Styles for the bracket container */
 .bracket {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Style for each round */
-.round {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Style for each match */
-.match {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Style for the champion */
-.champion {
-  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }

@@ -1,64 +1,29 @@
-<!-- bracket.component.html -->
-
 <div class="bracket">
   <!-- Left Side Teams -->
-  <div class="round">
-    <div class="match">
-      <!-- Teams Left -->
-      <div class="team-container">
-        <div class="team" *ngFor="let team of teamsleft">
-          {{ team.name }}
-        </div>
-      </div>
-    </div>
-    <div class="match">
-      <!-- Teams Left 1 -->
-      <div class="team-container">
-        <div class="team" *ngFor="let team of teamsleft1">
-          {{ team.name }}
-        </div>
-      </div>
-    </div>
-    <!-- Additional rounds for teamsleft2, teamsleft3, teamsleft4, teamsleft5 -->
-    ...
-    <div class="match">
-      <!-- Final Left Team -->
-      <div class="team-container">
-        <div class="team">{{ teamsleftfinal.name }}</div>
-      </div>
+  <div class="team-set teamsleft">
+    <!-- Teams Left -->
+    <div class="team" *ngFor="let team of teamsleft">
+      {{ team.name }}
     </div>
   </div>
-  
+  <div class="team-set teamsleft1">
+    <!-- Teams Left 1 -->
+    <div class="team" *ngFor="let team of teamsleft1">
+      {{ team.name }}
+    </div>
+  </div>
+
   <!-- Right Side Teams -->
-  <div class="round">
-    <div class="match">
-      <!-- Teams Right 1 -->
-      <div class="team-container">
-        <div class="team" *ngFor="let team of teamsright1">
-          {{ team.name }}
-        </div>
-      </div>
-    </div>
-    <div class="match">
-      <!-- Teams Right -->
-      <div class="team-container">
-        <div class="team" *ngFor="let team of teamsright">
-          {{ team.name }}
-        </div>
-      </div>
-    </div>
-    <!-- Additional rounds for teamsright2, teamsright3, teamsright4, teamsright5 -->
-    ...
-    <div class="match">
-      <!-- Final Right Team -->
-      <div class="team-container">
-        <div class="team">{{ teamsrightfinal.name }}</div>
-      </div>
+  <div class="team-set teamsright1">
+    <!-- Teams Right 1 -->
+    <div class="team" *ngFor="let team of teamsright1">
+      {{ team.name }}
     </div>
   </div>
-  
-  <!-- Champion -->
-  <div class="champion">
-    <div class="team">{{ champion.name }}</div>
+  <div class="team-set teamsright">
+    <!-- Teams Right -->
+    <div class="team" *ngFor="let team of teamsright">
+      {{ team.name }}
+    </div>
   </div>
 </div>
