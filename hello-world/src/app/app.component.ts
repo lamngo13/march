@@ -110,6 +110,98 @@ export class AppComponent {
     new Team("Saint Peters", 15, 0)
   ];
 
+  teamsleft2: Team[] = [
+    new Team("Placeholder4", 1, 0),
+    new Team("Placeholder5", 1, 0),
+    new Team("Placeholder6", 1, 0),
+    new Team("Placeholder7", 1, 0),
+    new Team("Placeholder8", 1, 0),
+    new Team("Placeholder9", 1, 0),
+    new Team("Placeholder10", 1, 0),
+    new Team("Placeholder11", 1, 0),
+    new Team("Placeholder12", 1, 0),
+    new Team("Placeholder13", 1, 0),
+    new Team("Placeholder14", 1, 0),
+    new Team("Placeholder15", 1, 0),
+    new Team("Placeholder16", 1, 0),
+    new Team("Placeholder17", 1, 0),
+    new Team("Placeholder18", 1, 0),
+    new Team("Placeholder19", 1, 0)
+  ];
+  teamsleft3: Team[] = [
+    new Team("Placeholder20", 1, 0),
+    new Team("Placeholder21", 1, 0),
+    new Team("Placeholder22", 1, 0),
+    new Team("Placeholder23", 1, 0),
+    new Team("Placeholder24", 1, 0),
+    new Team("Placeholder25", 1, 0),
+    new Team("Placeholder26", 1, 0),
+    new Team("Placeholder27", 1, 0)
+
+  ];
+  teamsleft4: Team[] = [
+    new Team("Placeholder28", 1, 0),
+    new Team("Placeholder29", 1, 0),
+    new Team("Placeholder30", 1, 0),
+    new Team("Placeholder31", 1, 0)
+  ];
+
+  teamsright2: Team[] = [
+    new Team("Placeholder32", 1, 0),
+    new Team("Placeholder33", 1, 0),
+    new Team("Placeholder34", 1, 0),
+    new Team("Placeholder35", 1, 0),
+    new Team("Placeholder36", 1, 0),
+    new Team("Placeholder37", 1, 0),
+    new Team("Placeholder38", 1, 0),
+    new Team("Placeholder39", 1, 0),
+    new Team("Placeholder40", 1, 0),
+    new Team("Placeholder41", 1, 0),
+    new Team("Placeholder42", 1, 0),
+    new Team("Placeholder43", 1, 0),
+    new Team("Placeholder44", 1, 0),
+    new Team("Placeholder45", 1, 0),
+    new Team("Placeholder46", 1, 0),
+    new Team("Placeholder47", 1, 0)
+  ];
+
+  teamsright3: Team[] = [
+    new Team("Placeholder48", 1, 0),
+    new Team("Placeholder49", 1, 0),
+    new Team("Placeholder50", 1, 0),
+    new Team("Placeholder51", 1, 0),
+    new Team("Placeholder52", 1, 0),
+    new Team("Placeholder53", 1, 0),
+    new Team("Placeholder54", 1, 0),
+    new Team("Placeholder55", 1, 0)
+
+  ];
+
+  teamsright4: Team[] = [
+    new Team("Placeholder56", 1, 0),
+    new Team("Placeholder57", 1, 0),
+    new Team("Placeholder58", 1, 0),
+    new Team("Placeholder59", 1, 0)
+  ];
+
+  teamsright5: Team[] = [
+    new Team("Placeholder62", 1, 0),
+    new Team("Placeholder63", 1, 0),
+  ];
+
+  teamsleft5: Team[] = [
+    new Team("Placeholder60", 1, 0),
+    new Team("Placeholder61", 1, 0),
+  ];
+
+  teamsleftfinal = new Team("Placeholder64", 1, 0);
+  teamsrightfinal = new Team("Placeholder65", 1, 0);
+  champion = new Team("Placeholder66", 1, 0);
+
+  
+
+
+
   objectKeys = Object.keys;
 
   //gets keys of the team
@@ -117,31 +209,7 @@ export class AppComponent {
     return Object.keys(team);
   }
 
-  //first round, this MIGHT be universal
-  /*
-  toggleSelected(team: Team, isLeftSide: boolean): void {
-    // Reset selected state for all teams
-    this.teamsleft.forEach(t => t.aselected = false);
-    this.teamsright.forEach(t => t.aselected = false);
 
-    // Set selected state for the clicked team
-    team.aselected = true;
-
-    // Set selected state for the other team in the pair
-    if (isLeftSide) {
-      const index = this.teamsleft.indexOf(team);
-      this.teamsright[index].aselected = false;
-    } else {
-      const index = this.teamsright.indexOf(team);
-      this.teamsleft[index].aselected = false;
-    }
-  }
-  */
- // bracket.component.ts
-
-// bracket.component.ts
-
-// bracket.component.ts
 
 toggleSelected(team: Team, isLeftSide: boolean): void {
   const teams = isLeftSide ? this.teamsleft : this.teamsright;
