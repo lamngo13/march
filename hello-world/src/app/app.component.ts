@@ -195,9 +195,9 @@ export class AppComponent {
     new Team("Placeholder61", 1, 0),
   ];
 
-  teamsleftfinal = new Team("Placeholder64", 1, 0);
-  teamsrightfinal = new Team("Placeholder65", 1, 0);
-  champion = new Team("Placeholder66", 1, 0);
+  teamsleftfinal = new Team("LEFTFINAL", 1, 0);
+  teamsrightfinal = new Team("RIGHTFINAL", 1, 0);
+  champion = new Team("CHAMPION", 1, 0);
 
   
 
