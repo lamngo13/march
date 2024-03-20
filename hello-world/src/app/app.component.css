@@ -1,55 +1,38 @@
-/*
- *  Flex Layout Specifics
-*/
-main{
-    display:flex;
-    flex-direction:row;
-  }
-  .round{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    width:200px;
-    list-style:none;
-    padding:0;
-  }
-    .round .spacer{ flex-grow:1; }
-    .round .spacer:first-child,
-    .round .spacer:last-child{ flex-grow:.5; }
-  
-    .round .game-spacer{
-      flex-grow:1;
-    }
-  
-  /*
-   *  General Styles
-  */
-  body{
-    font-family:sans-serif;
-    font-size:small;
-    padding:10px;
-    line-height:1.4em;
+/* bracket.component.css */
+
+/* Style for the bracket container */
+.bracket {
+    display: flex; /* Display as flexbox */
+    justify-content: space-between; /* Evenly space left and right sides */
   }
   
-  li.game{
-    padding-left:20px;
+  /* Style for each side of the bracket */
+  .round {
+    flex: 1; /* Grow to fill available space */
+    padding: 10rem; /* Add padding around each side */
   }
   
-    li.game.winner{
-      font-weight:bold;
-    }
-    li.game span{
-      float:right;
-      margin-right:5px;
-    }
+  /* Style for each match */
+  .match {
+    margin-bottom: 1rem; /* Add margin between matches */
+  }
   
-    li.game-top{ border-bottom:1px solid #aaa; }
+  /* Style for each team */
+  .team {
+    width: 100px; /* Set width of team box */
+    height: 30px; /* Set height of team box */
+    background-color: lightgray; /* Set background color of team box */
+    border: 1px solid gray; /* Set border around team box */
+    display: flex; /* Display as flexbox */
+    align-items: center; /* Center team name vertically */
+    justify-content: center; /* Center team name horizontally */
+    margin-bottom: 5px; /* Add margin between teams */
+  }
   
-    li.game-spacer{ 
-      border-right:1px solid #aaa;
-      min-height:40px;
-    }
-  
-    li.game-bottom{ 
-      border-top:1px solid #aaa;
-    }
+  .match .team:nth-child(even) {
+    margin-bottom: 4rem; /* Add margin between pairs of teams */
+  }
+
+  .spacer {
+    height: 10px; /* Set height to create spacing between pairs of teams */
+  }
