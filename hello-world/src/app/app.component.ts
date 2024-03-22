@@ -19,6 +19,7 @@ export class AppComponent {
   holderleft: Team[] = [];
   holderright: Team[] = [];
   showFull = false;
+  selectedNames: string[] = [];
 
   teamsleft: Team[] = [
     new Team("UConn", 1, 0),
@@ -193,6 +194,57 @@ export class AppComponent {
     console.log("submitround1 clicked");
 
     //give holder data
+    //strange case for the first roundonly
+    //store selected vals 
+    if (this.roundNumber == 0) {
+      console.log("FIRSTFIRSTFIRST")
+      this.teamsleft = this.currteamleft
+      this.teamsright = this.currteamright
+
+      for (var team of this.teamsleft) {
+        this.selectedNames.push(team.name)
+      }
+      for (var team of this.teamsright) {
+        this.selectedNames.push(team.name)
+      }
+
+      console.log("selectedNames: ")
+
+      var self = this;
+
+      this.selectedNames.forEach(function(item) {
+        self.teamsleft.forEach(function(team) {
+            if (team.name === item) {
+                team.selected = true;
+            }
+        });
+        
+        self.teamsright.forEach(function(teamr) {
+            if (teamr.name === item) {
+                teamr.selected = true;
+            }
+        });    
+    });
+
+
+      for (var team of this.teamsleft) {
+        console.log(team.name)
+        if (team.name in this.selectedNames) {
+          console.log("ASDF")
+          team.selected = true;
+        }
+      }
+      for (var team of this.teamsright) {
+        if (team.name in this.selectedNames) {
+          team.selected = true;
+        }
+      }
+
+      console.log(this.teamsleft)
+      console.log(this.teamsright)
+    }
+    console.log("end first round debug")
+
 
     //check if the right number of teams are selected by enumeration
     //so like the length of the array of selected teams should be 8
@@ -257,12 +309,16 @@ export class AppComponent {
     this.currteamright = this.holderright;
 
     //reset the selected teams
+    /*
     for (var i of this.currteamleft) {
       i.selected = false;
     }
     for (var i of this.currteamright) {
       i.selected = false;
     }
+    */
+    console.log("this team right current")
+    console.log(this.currteamright)
 
     //this.teamsleft1 = this.currteamleft;
     //this.teamsright1 = this.currteamright;
@@ -278,6 +334,12 @@ export class AppComponent {
   //gets keys of the team
   a(team: any) {
     return Object.keys(team);
+  }
+
+  deeb() {
+    console.log("deeb")
+    console.log(this.teamsleft)
+    console.log(this.teamsright)
   }
 
   //debug function for selecting half teams
