@@ -475,6 +475,53 @@ export class AppComponent {
     //TODO REORDER CORRECTLY
   }
 
+  randomize() {
+    console.log("RANDOMIZE CALLED")
+    console.log(this.currteamleft)
+    //this.currteamleft = this.shuffleArrayWithPreservedPairs(this.currteamleft);
+    //this.currteamright = this.shuffleArrayWithPreservedPairs(this.currteamright);
+    this.shuffleArrayWithPreservedPairs(this.currteamleft);
+    this.shuffleArrayWithPreservedPairs(this.currteamright);
+    console.log("AFTER")
+    console.log(this.currteamleft)
+    //console.log(this.currteamright)
+  }
+
+  shuffleArrayWithPreservedPairs(arr: Team[]) {
+    const length = arr.length;
+  
+    // Create an array to store shuffled pairs
+    const shuffledPairs: Team[] = [];
+  
+    // Shuffle individual pairs and store them in shuffledPairs
+    for (let i = 0; i < length - 1; i += 2) {
+      // Randomly choose a position within the array for the next pair
+      const randomIndex = i + Math.floor(Math.random() * ((length - i) / 2)) * 2;
+  
+      // Swap elements to shuffle the pair
+      const temp1 = arr[i];
+      const temp2 = arr[i + 1];
+      arr[i] = arr[randomIndex];
+      arr[i + 1] = arr[randomIndex + 1];
+      arr[randomIndex] = temp1;
+      arr[randomIndex + 1] = temp2;
+  
+      // Store the shuffled pair
+      shuffledPairs.push(arr[i]);
+      shuffledPairs.push(arr[i + 1]);
+    }
+  
+    // Copy the remaining element if the array length is odd
+    if (length % 2 !== 0) {
+      shuffledPairs.push(arr[length - 1]);
+    }
+  
+    // Copy shuffled pairs back to the original array
+    for (let i = 0; i < length; i++) {
+      arr[i] = shuffledPairs[i];
+    }
+  }
+
   //gets keys of the team
   a(team: any) {
     return Object.keys(team);
