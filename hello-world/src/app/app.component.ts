@@ -201,10 +201,33 @@ export class AppComponent {
   }
 
 
+  //selectTeam(team: Team): void {
+   // console.log("ASDF")
+  //}
   selectTeam(team: Team): void {
-    console.log("ASDF")
+    console.log("selectTeam for " + team.name);
+    console.log("selected: " + team.selected);
+    const teams = this.teamsleft.includes(team) ? this.teamsleft : this.teamsright;
+    
+    // If the clicked team is already selected, deselect it
+    if (team.selected) {
+      team.selected = false;
+    } else {
+      // Deselect the previously selected team from the same pair, if any
+      const pairIndex = teams.indexOf(team);
+      if (pairIndex !== -1) {
+        const otherTeamIndex = pairIndex % 2 === 0 ? pairIndex + 1 : pairIndex - 1;
+        if (otherTeamIndex >= 0 && otherTeamIndex < teams.length) {
+          teams[otherTeamIndex].selected = false;
+        }
+      }
+      
+      // Select the clicked team
+      team.selected = true;
+    }
   }
 
+  /*
 toggleSelected(team: Team, isLeftSide: boolean): void {
   const teams = isLeftSide ? this.teamsleft : this.teamsright;
   
@@ -225,7 +248,7 @@ toggleSelected(team: Team, isLeftSide: boolean): void {
     team.aselected = true;
   }
 }
-
+*/
 
 
 

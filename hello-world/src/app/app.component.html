@@ -2,7 +2,7 @@
   <!-- Left Side Teams -->
   <div class="team-set teamsleft">
     <!-- Teams Left -->
-    <button class="team" *ngFor="let team of teamsleft" (click)="selectTeam(team)">
+    <button class="team" [class.selected]="team.selected" *ngFor="let team of teamsleft" (click)="selectTeam(team)">
       {{ team.name }}
     </button>
   </div>
@@ -76,19 +76,19 @@
   </div>
 
   <!-- champion -->
-  <div class="team-set champion">
+  <div class="middle-set champion">
     <!-- Teams Left Final -->
     <button class="team"(click)="selectTeam(champion)">
       {{ champion.name }}
     </button>
-  </div>
-<!--
-  <div class="bruhbutton">
-    <button (click)="bruhbutton()">
-      {{ 'bruhText' }}
+
+    <button class="bruhbutton" (click)="bruhbutton()">
+      {{ 'bruhtext' }}
     </button>
   </div>
-  -->
+
+
+  
 
 
 
