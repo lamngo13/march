@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "hello-world",
+            "outputPath": "docs/hello-world",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
