@@ -5,12 +5,13 @@ export class Team {
     wins: number;
     selected: boolean;
 
-  
-    constructor(name: string, seed: number, wins: number) {
+
+
+    constructor(name: string, seed: number, wins: number, selected: boolean = false) {
       this.name = name;
       this.seed = seed;
       this.wins = wins;
-      this.selected = false;
+      this.selected = selected;
     }
   }
   

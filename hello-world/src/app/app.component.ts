@@ -206,6 +206,33 @@ export class AppComponent {
     console.log("submitround1 clicked");
 
     //give holder data
+    if (this.roundNumber == 0) {
+      //this.toholdleft0 = this.currteamleft.slice();
+      //this.toholdright0 = this.currteamright.slice();
+      
+      for (var i of this.currteamleft) {
+        this.selectedNames.push(i.name);
+      }
+      for (var i of this.currteamright) {
+        this.selectedNames.push(i.name);
+      }
+
+      for (const team of this.currteamleft) {
+        const newTeam = new Team(team.name, team.seed, team.wins, team.selected);
+        this.toholdleft0.push(newTeam);
+    }
+
+    // Create new teams for this.toholdright0
+    for (const team of this.currteamright) {
+        const newTeam = new Team(team.name, team.seed, team.wins, team.selected);
+        this.toholdright0.push(newTeam);
+    }
+      
+      console.log("lam")
+      console.log(this.toholdleft0)
+      console.log(this.toholdright0)
+      //return;
+    }
 
     //check if the right number of teams are selected by enumeration
     //so like the length of the array of selected teams should be 8
@@ -249,9 +276,9 @@ export class AppComponent {
     this.holderright = [];
 
     //todo add error checking
-    console.log(this.currteamleft)
-    console.log(this.currteamright)
-    console.log("a")
+    //console.log(this.currteamleft)
+    //console.log(this.currteamright)
+    //console.log("a")
 
 
 
