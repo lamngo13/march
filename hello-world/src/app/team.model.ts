@@ -4,6 +4,7 @@ export class Team {
     seed: number;
     wins: number;
     aselected: boolean;
+    
   
     constructor(name: string, seed: number, wins: number) {
       this.name = name;
