@@ -32,7 +32,7 @@
   </div>
   <div class="team-set teamsleftfinal" *ngIf="roundNumber==5">
     <!-- Teams Left Final -->
-    <button class="team" (click)="selectTeam(teamsleftfinal)">
+    <button class="team" [class.selected]="teamsleftfinal.selected" (click)="selectTeam(teamsleftfinal)">
       {{ teamsleftfinal.name }}
     </button>
   </div>
@@ -70,7 +70,7 @@
   </div>
   <div class="team-set teamsrightfinal" *ngIf="roundNumber==5">
     <!-- Teams Left Final -->
-    <button class="team" (click)="selectTeam(teamsrightfinal)">
+    <button class="team" [class.selected]="teamsrightfinal.selected" (click)="selectTeam(teamsrightfinal)">
       {{ teamsrightfinal.name }}
     </button>
   </div>
@@ -101,6 +101,9 @@
     </button>
     <button class="round-button" *ngIf="roundNumber==6" (click)="selecthalf()">
       {{ 'show full ' }}
+    </button>
+    <button class="round-button" *ngIf="roundNumber==6" (click)="selecthalf()">
+      {{ 'reset' }}
     </button>
     <!-- Add more buttons as needed -->
   </div>

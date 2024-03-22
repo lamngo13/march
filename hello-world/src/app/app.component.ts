@@ -190,7 +190,42 @@ export class AppComponent {
 
   submitround1() {
     console.log("submitround1 clicked");
+
+    //check if the right number of teams are selected by enumeration
     this.roundNumber += 1; // iteratre round number - useful in html
+
+    //check for final team
+    if (this.currteamleft.length == 2) {
+      console.log("here")
+      this.teamsleftfinal = this.currteamleft[0];
+      this.teamsrightfinal = this.currteamright[0];
+
+      //reset their selected status
+      this.teamsleftfinal.selected = false;
+      this.teamsrightfinal.selected = false;
+
+      //reset current teams for later logic
+      this.currteamleft = []
+      return;
+    }
+
+    //check for champion
+    console.log(this.roundNumber)
+    if (this.roundNumber == 4) {
+      console.log("AYYYYOIOOO")
+    }
+
+    console.log("ROUND NUMBER: " + this.roundNumber)
+    if (this.roundNumber == 6) {
+      console.log("YEAER")
+      if (this.teamsleftfinal.selected) {
+        this.champion = this.teamsleftfinal;
+        return;
+      } else {
+        this.champion = this.teamsrightfinal;
+        return;
+      }
+    }
 
     //reset holders
     this.holderleft = [];
