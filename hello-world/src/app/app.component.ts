@@ -190,6 +190,7 @@ export class AppComponent {
 
   submitround1() {
     console.log("submitround1 clicked");
+    this.roundNumber = 1;
 
     //todo add error checking
 
