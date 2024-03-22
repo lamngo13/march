@@ -30,6 +30,9 @@ export class AppComponent {
   toholdright3: Team[] = [];
   toholdleft4: Team[] = [];
   toholdright4: Team[] = [];
+  toholdleftfinal: Team = new Team("leftholder", 0, 0); // Add an initializer or assign a value
+  toholdrightfinal: Team = new Team("rightholder", 0, 0); // Add an initializer or assign a value
+  toholdchampion: Team = new Team("championholder", 0, 0); // Add an initializer or assign a value
   okafor = false;
 
   showFull = false;
