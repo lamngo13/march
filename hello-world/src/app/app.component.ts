@@ -209,6 +209,8 @@ export class AppComponent {
       }
 
       console.log("selectedNames: ")
+      console.log(this.teamsleft)
+      console.log(this.teamsright)
 
       var self = this;
 
@@ -226,19 +228,6 @@ export class AppComponent {
         });    
     });
 
-
-      for (var team of this.teamsleft) {
-        console.log(team.name)
-        if (team.name in this.selectedNames) {
-          console.log("ASDF")
-          team.selected = true;
-        }
-      }
-      for (var team of this.teamsright) {
-        if (team.name in this.selectedNames) {
-          team.selected = true;
-        }
-      }
 
       console.log(this.teamsleft)
       console.log(this.teamsright)
