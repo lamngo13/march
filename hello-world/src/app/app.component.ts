@@ -16,6 +16,8 @@ export class AppComponent {
   roundNumber = 0;
   currteamleft: Team[] = [];
   currteamright: Team[] = [];
+  holderleft: Team[] = [];
+  holderright: Team[] = [];
 
   teamsleft: Team[] = [
     new Team("UConn", 1, 0),
@@ -186,10 +188,27 @@ export class AppComponent {
     this.currteamright = this.teamsright;
   }
 
-  bruhbutton() {
-    console.log("bruh")
-    console.log(this.currteamleft)
-    console.log(this.currteamright)
+  submitround1() {
+    console.log("submitround1 clicked");
+
+    //todo add error checking
+
+    
+    for (var i of this.currteamleft) {
+      if (i.selected) {
+        this.holderleft.push(i);
+      }
+    }
+    for (var i of this.currteamright) {
+      if (i.selected) {
+        this.holderright.push(i);
+      }
+    }
+    this.currteamleft = this.holderleft;
+    this.currteamright = this.holderright;
+    console.log("submitround1 done")
+
+
   }
 
 
@@ -207,7 +226,7 @@ export class AppComponent {
   selectTeam(team: Team): void {
     console.log("selectTeam for " + team.name);
     console.log("selected: " + team.selected);
-    const teams = this.teamsleft.includes(team) ? this.teamsleft : this.teamsright;
+    const teams = this.currteamleft.includes(team) ? this.currteamleft : this.currteamright;
     
     // If the clicked team is already selected, deselect it
     if (team.selected) {

@@ -89,13 +89,28 @@
   height: 100%;
 }
 
+/*
 .bruhbutton {
-  right: 48%;
-  width: 100%;
-  height: 100%;
+  right: 80%;
+  width: 10%;
+  height: 10%;
   margin-top: 50px;
   border: 1px solid black;
   background-color: white;
+}
+*/
+
+.bruhbutton {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  margin-bottom: 40px;
+  margin-top: 40px; /* Adjust margin-top as needed */
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
 }
 
 .team.selected {
