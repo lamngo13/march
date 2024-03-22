@@ -228,9 +228,121 @@ export class AppComponent {
         this.toholdright0.push(newTeam);
     }
       
-      console.log("lam")
+      console.log("lam0")
       console.log(this.toholdleft0)
       console.log(this.toholdright0)
+      //return;
+    }
+
+    if (this.roundNumber == 1) {
+      //this.toholdleft0 = this.currteamleft.slice();
+      //this.toholdright0 = this.currteamright.slice();
+      
+      for (var i of this.currteamleft) {
+        this.selectedNames.push(i.name);
+      }
+      for (var i of this.currteamright) {
+        this.selectedNames.push(i.name);
+      }
+
+      for (const team of this.currteamleft) {
+        const newTeam = new Team(team.name, team.seed, team.wins, team.selected);
+        this.toholdleft1.push(newTeam);
+    }
+
+    // Create new teams for this.toholdright0
+    for (const team of this.currteamright) {
+        const newTeam = new Team(team.name, team.seed, team.wins, team.selected);
+        this.toholdright1.push(newTeam);
+    }
+      
+      console.log("lam1")
+      console.log(this.toholdleft1)
+      console.log(this.toholdright1)
+      //return;
+    }
+
+    if (this.roundNumber == 2) {
+      //this.toholdleft0 = this.currteamleft.slice();
+      //this.toholdright0 = this.currteamright.slice();
+      
+      for (var i of this.currteamleft) {
+        this.selectedNames.push(i.name);
+      }
+      for (var i of this.currteamright) {
+        this.selectedNames.push(i.name);
+      }
+
+      for (const team of this.currteamleft) {
+        const newTeam = new Team(team.name, team.seed, team.wins, team.selected);
+        this.toholdleft2.push(newTeam);
+    }
+
+    // Create new teams for this.toholdright0
+    for (const team of this.currteamright) {
+        const newTeam = new Team(team.name, team.seed, team.wins, team.selected);
+        this.toholdright2.push(newTeam);
+    }
+      
+      console.log("lam2")
+      console.log(this.toholdleft2)
+      console.log(this.toholdright2)
+      //return;
+    }
+
+    if (this.roundNumber == 3) {
+      //this.toholdleft0 = this.currteamleft.slice();
+      //this.toholdright0 = this.currteamright.slice();
+      
+      for (var i of this.currteamleft) {
+        this.selectedNames.push(i.name);
+      }
+      for (var i of this.currteamright) {
+        this.selectedNames.push(i.name);
+      }
+
+      for (const team of this.currteamleft) {
+        const newTeam = new Team(team.name, team.seed, team.wins, team.selected);
+        this.toholdleft3.push(newTeam);
+    }
+
+    // Create new teams for this.toholdright0
+    for (const team of this.currteamright) {
+        const newTeam = new Team(team.name, team.seed, team.wins, team.selected);
+        this.toholdright3.push(newTeam);
+    }
+      
+      console.log("lam3")
+      console.log(this.toholdleft3)
+      console.log(this.toholdright3)
+      //return;
+    }
+
+    if (this.roundNumber == 4) {
+      //this.toholdleft0 = this.currteamleft.slice();
+      //this.toholdright0 = this.currteamright.slice();
+      
+      for (var i of this.currteamleft) {
+        this.selectedNames.push(i.name);
+      }
+      for (var i of this.currteamright) {
+        this.selectedNames.push(i.name);
+      }
+
+      for (const team of this.currteamleft) {
+        const newTeam = new Team(team.name, team.seed, team.wins, team.selected);
+        this.toholdleft4.push(newTeam);
+    }
+
+    // Create new teams for this.toholdright0
+    for (const team of this.currteamright) {
+        const newTeam = new Team(team.name, team.seed, team.wins, team.selected);
+        this.toholdright4.push(newTeam);
+    }
+      
+      console.log("lam4")
+      console.log(this.toholdleft4)
+      console.log(this.toholdright4)
       //return;
     }
 
