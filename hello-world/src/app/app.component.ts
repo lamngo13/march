@@ -190,9 +190,17 @@ export class AppComponent {
 
   submitround1() {
     console.log("submitround1 clicked");
-    this.roundNumber = 1;
+    this.roundNumber += 1; // iteratre round number - useful in html
+
+    //reset holders
+    this.holderleft = [];
+    this.holderright = [];
 
     //todo add error checking
+    console.log(this.currteamleft)
+    console.log(this.currteamright)
+    console.log("a")
+
 
 
     for (var i of this.currteamleft) {
@@ -200,6 +208,7 @@ export class AppComponent {
         this.holderleft.push(i);
       }
     }
+    console.log("b")
     for (var i of this.currteamright) {
       if (i.selected) {
         this.holderright.push(i);
@@ -216,8 +225,8 @@ export class AppComponent {
       i.selected = false;
     }
 
-    this.teamsleft1 = this.currteamleft;
-    this.teamsright1 = this.currteamright;
+    //this.teamsleft1 = this.currteamleft;
+    //this.teamsright1 = this.currteamright;
 
     
 
