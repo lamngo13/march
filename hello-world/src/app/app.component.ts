@@ -351,13 +351,26 @@ export class AppComponent {
     }
 
     if (this.roundNumber == 5) {
-      /*
-      const newTeam = new Team(this.currteamleft[0].name, this.currteamleft[0].seed, this.currteamleft[0].wins, this.currteamleft[0].selected);
+      console.log("ROUND 5 MAYBEEEEEE")
+      console.log(this.teamsleftfinal)
+      console.log(this.teamsrightfinal)
+      const newTeam = new Team(this.teamsleftfinal.name, this.teamsleftfinal.seed, this.teamsleftfinal.wins, this.teamsleftfinal.selected);
       this.toholdleftfinal = newTeam;
-      const newTeam2 = new Team(this.currteamright[0].name, this.currteamright[0].seed, this.currteamright[0].wins, this.currteamright[0].selected);
+      const newTeam2 = new Team(this.teamsrightfinal.name, this.teamsrightfinal.seed, this.teamsrightfinal.wins, this.teamsrightfinal.selected);
       this.toholdrightfinal = newTeam2;
-      */
+
+      console.log("yeet yuh")
+      console.log(this.toholdleftfinal)
+      console.log(this.toholdrightfinal)
+
+      if (this.toholdleftfinal.selected) {
+        const newTeam = new Team(this.toholdleftfinal.name, this.toholdleftfinal.seed, this.toholdleftfinal.wins, this.toholdleftfinal.selected);
+        this.toholdchampion = newTeam;
+    } else {
+        const newTeam = new Team(this.toholdrightfinal.name, this.toholdrightfinal.seed, this.toholdrightfinal.wins, this.toholdrightfinal.selected);
+        this.toholdchampion = newTeam;
     }
+  }
 
     if (this.roundNumber == 6) {
       /*
@@ -384,9 +397,11 @@ export class AppComponent {
 
     //check for final team
     if (this.currteamleft.length == 2) {
-      console.log("here")
+      console.log("finalists")
       this.teamsleftfinal = this.currteamleft[0];
       this.teamsrightfinal = this.currteamright[0];
+      console.log(this.teamsleftfinal)
+      console.log(this.teamsrightfinal)
 
       //reset their selected status
       this.teamsleftfinal.selected = false;
@@ -452,6 +467,10 @@ export class AppComponent {
 
 
   objectKeys = Object.keys;
+
+  showFullBracket() {
+    this.okafor = !this.okafor;
+  }
 
   //gets keys of the team
   a(team: any) {
