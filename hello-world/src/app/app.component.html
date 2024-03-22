@@ -103,6 +103,9 @@
       <button class="round-button" *ngIf="roundNumber<5 || roundNumber==5" (click)="randomize()">
         {{ 'RANDOMIZE' }}
       </button>
+      <button class="round-button" *ngIf="roundNumber<5 || roundNumber==5" (click)="dbg()">
+        {{ 'DEBUG' }}
+      </button>
       <button class="round-button" *ngIf="roundNumber==6" (click)="showFullBracket()">
         {{ 'show full ' }}
       </button>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common'; // <-- Add this line
 import { Team } from './team.model';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ import { Team } from './team.model';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  constructor(private cdr: ChangeDetectorRef) {}
   title = 'hello-world';
   test = "ASDL:FKHASD:KFHDSA";
   roundNumber = 0;
@@ -202,8 +204,16 @@ export class AppComponent {
 
   
   ngOnInit() {
-    this.currteamleft = this.teamsleft;
-    this.currteamright = this.teamsright;
+    for (var i of this.teamsleft) {
+      const newTeam = new Team(i.name, i.seed, i.wins, i.selected);
+      this.currteamleft.push(newTeam);
+    }
+    for (var i of this.teamsright) {
+      const newTeam = new Team(i.name, i.seed, i.wins, i.selected);
+      this.currteamright.push(newTeam);
+    }
+    //this.currteamleft = this.teamsleft;
+    //this.currteamright = this.teamsright;
   }
 
   submitround1() {
@@ -215,10 +225,14 @@ export class AppComponent {
       //this.toholdright0 = this.currteamright.slice();
       
       for (var i of this.currteamleft) {
-        this.selectedNames.push(i.name);
+        if (i.selected) {
+          this.selectedNames.push(i.name);
+        }
       }
       for (var i of this.currteamright) {
-        this.selectedNames.push(i.name);
+        if (i.selected) {
+          this.selectedNames.push(i.name);
+        }
       }
 
       for (const team of this.currteamleft) {
@@ -471,9 +485,98 @@ export class AppComponent {
   objectKeys = Object.keys;
 
   showFullBracket() {
+    console.log("showFullBracket clicked");
     this.okafor = !this.okafor;
+    //let yeet = this.sortTeamsBasedOnSeeding(this.toholdleft0, this.currteamleft);
+    this.toholdleft0 = [];
+    console.log(this.toholdleft0)
+    console.log("ASDFLIHSADFLSADHFLADSKFHASDLKFHASDLFKH")
+    for (var i of this.teamsleft) {
+      const newTeam = new Team(i.name, i.seed, i.wins, i.selected);
+      this.toholdleft0.push(newTeam);
+    }
+
+    //assign selected to toholdleft0
+
+    console.log("toholder0")
+    console.log(this.toholdleft0)
+
+    //try to color
+    console.log("COLORING")
+    this.toholdleft0 = this.addselect(this.toholdleft0);
+    console.log(this.toholdleft0)
+
+    this.cdr.detectChanges();
     //TODO REORDER CORRECTLY
+    console.log("old")
+    console.log(this.teamsleft)
+
+    console.log("selected")
+    console.log(this.selectedNames)
   }
+
+  sanitizer(ref: Team[]): Team[] {
+    const neworder: Team[] = [];
+    for (var i of ref) {
+      const newTeam = new Team(i.name, i.seed, i.wins, i.selected);
+      neworder.push(newTeam);
+    }
+    return neworder;
+  }
+
+  addselect(ref: Team[]): Team[] { // ref is the thing we're coloring
+    const temp: Team[] = [];
+    let clean = temp;
+    clean = this.sanitizer(ref);
+    for (var i of clean) {
+      if (this.selectedNames.includes(i.name)) {
+        i.selected = true;
+      }
+    }
+    return clean;
+  }
+
+
+  /*
+  const newteamleft: Team[] = [];
+    for (var i in teamsleft) {
+      const newTeam = new Team(teamsleft[i].name, teamsleft[i].seed, teamsleft[i].wins, teamsleft[i].selected);
+      newteamleft.push(newTeam);
+    }
+    */
+
+  sortTeamsBasedOnSeeding(teams: Team[], teamsleft: Team[]): Team[] {
+    // Extract the seed values from teamsleft array
+    const newteamleft: Team[] = [];
+    for (var i in teamsleft) {
+      const newTeam = new Team(teamsleft[i].name, teamsleft[i].seed, teamsleft[i].wins, teamsleft[i].selected);
+      newteamleft.push(newTeam);
+    }
+    const seedsFromTeamsLeft = newteamleft.map(team => team.seed);
+
+    // Sort the teams array based on the seed values from teamsleft
+    teams.sort((a, b) => {
+        const indexA = seedsFromTeamsLeft.indexOf(a.seed);
+        const indexB = seedsFromTeamsLeft.indexOf(b.seed);
+
+        // Handle cases where one or both teams are not in teamsleft or have invalid seeds
+        if (indexA === -1 && indexB === -1) {
+            // If both teams are not in teamsleft, maintain their original order
+            return 0;
+        } else if (indexA === -1) {
+            // If team A is not in teamsleft, place team B first
+            return 1;
+        } else if (indexB === -1) {
+            // If team B is not in teamsleft, place team A first
+            return -1;
+        }
+
+        // Sort based on the index in teamsleft array
+        return indexA - indexB;
+    });
+
+    return teams;
+}
 
   randomize() {
     console.log("RANDOMIZE CALLED")
