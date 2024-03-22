@@ -10,7 +10,23 @@
 }
 
 .teamsleft1 {
-  left: 12.5%;
+  left: 8%;
+}
+
+.teamsleft2 {
+  left: 16%;
+}
+
+.teamsleft3 {
+  left: 24%;
+}
+
+.teamsleft4 {
+  left: 32%;
+}
+
+.teamsleft5 {
+  left: 40%;
 }
 
 .teamsright {
@@ -18,20 +34,41 @@
 }
 
 .teamsright1 {
-  right: 12.5%;
+  right: 8%;
 }
 
-/* Styles for teams */
+.teamsright2 {
+  right: 16%;
+}
+
+.teamsright3 {
+  right: 24%;
+}
+
+.teamsright4 {
+  right: 32%;
+}
+
+.teamsright5 {
+  right: 40%;
+}
+
+/* Styles for teams buttons */
 .team {
-  width: 120px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   margin-bottom: 10px;
   border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.team:hover {
+  background-color: lightgray;
 }
 
 /* Styles for the bracket container */
 .bracket {
-  position: relative;
   width: 100%;
   height: 100%;
 }

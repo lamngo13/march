@@ -211,6 +211,9 @@ export class AppComponent {
   }
 
 
+  selectTeam(team: Team): void {
+    console.log("ASDF")
+  }
 
 toggleSelected(team: Team, isLeftSide: boolean): void {
   const teams = isLeftSide ? this.teamsleft : this.teamsright;

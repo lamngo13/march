@@ -2,28 +2,64 @@
   <!-- Left Side Teams -->
   <div class="team-set teamsleft">
     <!-- Teams Left -->
-    <div class="team" *ngFor="let team of teamsleft">
+    <button class="team" *ngFor="let team of teamsleft" (click)="selectTeam(team)">
       {{ team.name }}
-    </div>
+    </button>
   </div>
   <div class="team-set teamsleft1">
     <!-- Teams Left 1 -->
-    <div class="team" *ngFor="let team of teamsleft1">
+    <button class="team" *ngFor="let team of teamsleft1" (click)="selectTeam(team)">
       {{ team.name }}
-    </div>
+    </button>
+  </div>
+  <div class="team-set teamsleft2">
+    <!-- Teams Left 2 -->
+    <button class="team" *ngFor="let team of teamsleft2" (click)="selectTeam(team)">
+      {{ team.name }}
+    </button>
+  </div>
+  <div class="team-set teamsleft3">
+    <!-- Teams Left 3 -->
+    <button class="team" *ngFor="let team of teamsleft3" (click)="selectTeam(team)">
+      {{ team.name }}
+    </button>
+  </div>
+  <div class="team-set teamsleft4">
+    <!-- Teams Left 4 -->
+    <button class="team" *ngFor="let team of teamsleft4" (click)="selectTeam(team)">
+      {{ team.name }}
+    </button>
   </div>
 
   <!-- Right Side Teams -->
-  <div class="team-set teamsright1">
-    <!-- Teams Right 1 -->
-    <div class="team" *ngFor="let team of teamsright1">
-      {{ team.name }}
-    </div>
-  </div>
   <div class="team-set teamsright">
     <!-- Teams Right -->
-    <div class="team" *ngFor="let team of teamsright">
+    <button class="team" *ngFor="let team of teamsright" (click)="selectTeam(team)">
       {{ team.name }}
-    </div>
+    </button>
+  </div>
+  <div class="team-set teamsright1">
+    <!-- Teams Right 1 -->
+    <button class="team" *ngFor="let team of teamsright1" (click)="selectTeam(team)">
+      {{ team.name }}
+    </button>
+  </div>
+  <div class="team-set teamsright2">
+    <!-- Teams Right 2 -->
+    <button class="team" *ngFor="let team of teamsright2" (click)="selectTeam(team)">
+      {{ team.name }}
+    </button>
+  </div>
+  <div class="team-set teamsright3">
+    <!-- Teams Right 3 -->
+    <button class="team" *ngFor="let team of teamsright3" (click)="selectTeam(team)">
+      {{ team.name }}
+    </button>
+  </div>
+  <div class="team-set teamsright4">
+    <!-- Teams Right 4 -->
+    <button class="team" *ngFor="let team of teamsright4" (click)="selectTeam(team)">
+      {{ team.name }}
+    </button>
   </div>
 </div>
