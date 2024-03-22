@@ -18,6 +18,7 @@ export class AppComponent {
   currteamright: Team[] = [];
   holderleft: Team[] = [];
   holderright: Team[] = [];
+  showFull = false;
 
   teamsleft: Team[] = [
     new Team("UConn", 1, 0),
@@ -191,7 +192,16 @@ export class AppComponent {
   submitround1() {
     console.log("submitround1 clicked");
 
+    //give holder data
+
     //check if the right number of teams are selected by enumeration
+    //so like the length of the array of selected teams should be 8
+    //or 64 32 16 8 4 2 1
+    //maybe do this after current team
+    //maybe do something janky with holder
+    //or make new holders
+
+
     this.roundNumber += 1; // iteratre round number - useful in html
 
     //check for final team
@@ -207,12 +217,6 @@ export class AppComponent {
       //reset current teams for later logic
       this.currteamleft = []
       return;
-    }
-
-    //check for champion
-    console.log(this.roundNumber)
-    if (this.roundNumber == 4) {
-      console.log("AYYYYOIOOO")
     }
 
     console.log("ROUND NUMBER: " + this.roundNumber)
@@ -295,6 +299,11 @@ export class AppComponent {
     }
     console.log(this.currteamleft)
     console.log(this.currteamright)
+  }
+
+  dbg() {
+    console.log("debug")
+    console.log(this.teamsleft)
   }
 
 
