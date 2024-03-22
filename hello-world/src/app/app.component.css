@@ -117,3 +117,19 @@
   background-color: rgb(4, 161, 4);
 }
 
+.button-set {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px; /* Adjust bottom spacing as needed */
+  display: flex;
+  justify-content: space-between; /* Spacing between buttons */
+}
+
+.round-button {
+  width: 120px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+}

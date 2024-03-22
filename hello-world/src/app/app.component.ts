@@ -193,7 +193,7 @@ export class AppComponent {
 
     //todo add error checking
 
-    
+
     for (var i of this.currteamleft) {
       if (i.selected) {
         this.holderleft.push(i);
@@ -206,9 +206,21 @@ export class AppComponent {
     }
     this.currteamleft = this.holderleft;
     this.currteamright = this.holderright;
+
+    //reset the selected teams
+    for (var i of this.currteamleft) {
+      i.selected = false;
+    }
+    for (var i of this.currteamright) {
+      i.selected = false;
+    }
+
+    this.teamsleft1 = this.currteamleft;
+    this.teamsright1 = this.currteamright;
+
+    
+
     console.log("submitround1 done")
-
-
   }
 
 
@@ -217,6 +229,27 @@ export class AppComponent {
   //gets keys of the team
   a(team: any) {
     return Object.keys(team);
+  }
+
+  //debug function for selecting half teams
+  selecthalf() {
+    console.log("selectHalfTeams clicked");
+    var should = true;
+    for (var i of this.currteamleft) {
+      if (should) {
+        i.selected = true;
+      }
+      should = !should;
+    }
+    var should = true;
+    for (var i of this.currteamright) {
+      if (should) {
+        i.selected = true;
+      }
+      should = !should;
+    }
+    console.log(this.currteamleft)
+    console.log(this.currteamright)
   }
 
 
