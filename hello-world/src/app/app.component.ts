@@ -472,6 +472,7 @@ export class AppComponent {
 
   showFullBracket() {
     this.okafor = !this.okafor;
+    //TODO REORDER CORRECTLY
   }
 
   //gets keys of the team
