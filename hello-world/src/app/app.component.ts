@@ -350,6 +350,28 @@ export class AppComponent {
       //return;
     }
 
+    if (this.roundNumber == 5) {
+      /*
+      const newTeam = new Team(this.currteamleft[0].name, this.currteamleft[0].seed, this.currteamleft[0].wins, this.currteamleft[0].selected);
+      this.toholdleftfinal = newTeam;
+      const newTeam2 = new Team(this.currteamright[0].name, this.currteamright[0].seed, this.currteamright[0].wins, this.currteamright[0].selected);
+      this.toholdrightfinal = newTeam2;
+      */
+    }
+
+    if (this.roundNumber == 6) {
+      /*
+      if (this.teamsleftfinal.selected) {
+        const newTeam = new Team(this.teamsleftfinal.name, this.teamsleftfinal.seed, this.teamsleftfinal.wins, this.teamsleftfinal.selected);
+        this.toholdchampion = newTeam;
+      } else {
+        const newTeam = new Team(this.teamsrightfinal.name, this.teamsrightfinal.seed, this.teamsrightfinal.wins, this.teamsrightfinal.selected);
+        this.toholdchampion = newTeam;
+      }
+      */
+    }
+
+
     //check if the right number of teams are selected by enumeration
     //so like the length of the array of selected teams should be 8
     //or 64 32 16 8 4 2 1

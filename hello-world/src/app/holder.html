@@ -1,0 +1,122 @@
+<div class="bracket">
+    <!-- Left Side Teams -->
+    <div class="team-set teamsleft" *ngIf="roundNumber==0">
+      <!-- Teams Left -->
+      <button class="team" [class.selected]="team.selected" *ngFor="let team of currteamleft" (click)="selectTeam(team)">
+        {{ team.name }}
+      </button>
+    </div>
+    <div class="team-set teamsleft1" *ngIf="roundNumber==1">
+      <!-- Teams Left 1 -->
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamleft" (click)="selectTeam(team)">
+        {{ team.name }}
+      </button>
+    </div>
+    <div class="team-set teamsleft2" *ngIf="roundNumber==2">
+      <!-- Teams Left 2 -->
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamleft" (click)="selectTeam(team)">
+        {{ team.name }}
+      </button>
+    </div>
+    <div class="team-set teamsleft3" *ngIf="roundNumber==3">
+      <!-- Teams Left 3 -->
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamleft" (click)="selectTeam(team)">
+        {{ team.name }}
+      </button>
+    </div>
+    <div class="team-set teamsleft4" *ngIf="roundNumber==4">
+      <!-- Teams Left 4 -->
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamleft" (click)="selectTeam(team)">
+        {{ team.name }}
+      </button>
+    </div>
+    <div class="team-set teamsleftfinal" *ngIf="roundNumber==5">
+      <!-- Teams Left Final -->
+      <button class="team" [class.selected]="teamsleftfinal.selected" (click)="selectTeam(teamsleftfinal)">
+        {{ teamsleftfinal.name }}
+      </button>
+    </div>
+  
+    <!-- Right Side Teams -->
+    <div class="team-set teamsright" *ngIf="roundNumber==0">
+      <!-- Teams Right -->
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamright" (click)="selectTeam(team)">
+        {{ team.name }}
+      </button>
+    </div>
+    <div class="team-set teamsright1" *ngIf="roundNumber==1">
+      <!-- Teams Right 1 -->
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamright" (click)="selectTeam(team)">
+        {{ team.name }}
+      </button>
+    </div>
+    <div class="team-set teamsright2" *ngIf="roundNumber==2">
+      <!-- Teams Right 2 -->
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamright" (click)="selectTeam(team)">
+        {{ team.name }}
+      </button>
+    </div>
+    <div class="team-set teamsright3" *ngIf="roundNumber==3">
+      <!-- Teams Right 3 -->
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamright" (click)="selectTeam(team)">
+        {{ team.name }}
+      </button>
+    </div>
+    <div class="team-set teamsright4" *ngIf="roundNumber==4">
+      <!-- Teams Right 4 -->
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamright" (click)="selectTeam(team)">
+        {{ team.name }}
+      </button>
+    </div>
+    <div class="team-set teamsrightfinal" *ngIf="roundNumber==5">
+      <!-- Teams Left Final -->
+      <button class="team" [class.selected]="teamsrightfinal.selected" (click)="selectTeam(teamsrightfinal)">
+        {{ teamsrightfinal.name }}
+      </button>
+    </div>
+  
+    <!-- champion -->
+    <div class="middle-set champion" *ngIf="roundNumber==6">
+      <!-- Teams Left Final -->
+      <button class="team"(click)="selectTeam(champion)">
+        {{ champion.name }}
+      </button>
+  
+      
+    </div>
+  
+    <!-- submit button 
+    <button class="bruhbutton" (click)="submitround1()">
+      {{ 'submit round 1' }}
+    </button>
+    -->
+  
+  
+    <div class="button-set">
+      <button class="round-button" *ngIf="roundNumber<5 || roundNumber==5" (click)="submitround1()">
+        {{ 'Submit Round' }}
+      </button>
+      <button class="round-button" *ngIf="roundNumber<5 || roundNumber==5" (click)="selecthalf()">
+        {{ 'half' }}
+      </button>
+      <button class="round-button" *ngIf="roundNumber==6" (click)="selecthalf()">
+        {{ 'show full ' }}
+      </button>
+      <button class="round-button" *ngIf="roundNumber==6" (click)="selecthalf()">
+        {{ 'reset' }}
+      </button>
+      <!-- Add more buttons as needed -->
+    </div>
+  
+    
+  
+  
+  
+    <!-- true buttons -->
+    
+  
+  
+  
+    <!-- end prob don't touch this lol-->
+  </div>
+  
