@@ -484,6 +484,10 @@ export class AppComponent {
 
   objectKeys = Object.keys;
 
+  pagereset() {
+    window.location.reload();
+  }
+
   showFullBracket() {
     console.log("showFullBracket clicked");
     this.okafor = !this.okafor;
@@ -495,8 +499,18 @@ export class AppComponent {
       const newTeam = new Team(i.name, i.seed, i.wins, i.selected);
       this.toholdleft0.push(newTeam);
     }
+    this.toholdright0 = [];
+    for (var i of this.teamsright) {
+      const newTeam = new Team(i.name, i.seed, i.wins, i.selected);
+      this.toholdright0.push(newTeam);
+    }
 
     //assign selected to toholdleft0
+
+
+
+
+
 
     console.log("toholder0")
     console.log(this.toholdleft0)
@@ -504,6 +518,7 @@ export class AppComponent {
     //try to color
     console.log("COLORING")
     this.toholdleft0 = this.addselect(this.toholdleft0);
+    this.toholdright0 = this.addselect(this.toholdright0);
     console.log(this.toholdleft0)
 
     this.cdr.detectChanges();
