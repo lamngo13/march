@@ -25,7 +25,7 @@
   left: 32%;
 }
 
-.teamsleft5 {
+.teamsleftfinal {
   left: 40%;
 }
 
@@ -49,10 +49,13 @@
   right: 32%;
 }
 
-.teamsright5 {
+.teamsrightfinal {
   right: 40%;
 }
 
+.champion {
+  right: 48%;
+}
 /* Styles for teams buttons */
 .team {
   width: 100%;
