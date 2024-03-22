@@ -76,7 +76,7 @@
   </div>
 
   <!-- champion -->
-  <div class="middle-set champion" *ngIf="roundNumber==5">
+  <div class="middle-set champion" *ngIf="roundNumber==6">
     <!-- Teams Left Final -->
     <button class="team"(click)="selectTeam(champion)">
       {{ champion.name }}
@@ -92,9 +92,9 @@
   -->
 
 
-  <div class="button-set">
+  <div class="button-set" *ngIf="roundNumber<5 || roundNumber==5">
     <button class="round-button" (click)="submitround1()">
-      {{ 'Submit Round 1' }}
+      {{ 'Submit Round' }}
     </button>
     <button class="round-button" (click)="selecthalf()">
       {{ 'half' }}
