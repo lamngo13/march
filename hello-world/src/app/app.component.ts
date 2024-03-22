@@ -18,6 +18,19 @@ export class AppComponent {
   currteamright: Team[] = [];
   holderleft: Team[] = [];
   holderright: Team[] = [];
+
+  selectedNames: string[] = [];
+  toholdleft0: Team[] = [];
+  toholdright0: Team[] = [];
+  toholdleft1: Team[] = [];
+  toholdright1: Team[] = [];
+  toholdleft2: Team[] = [];
+  toholdright2: Team[] = [];
+  toholdleft3: Team[] = []; 
+  toholdright3: Team[] = [];
+  toholdleft4: Team[] = [];
+  toholdright4: Team[] = [];
+
   showFull = false;
 
   teamsleft: Team[] = [
