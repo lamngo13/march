@@ -370,6 +370,8 @@ export class AppComponent {
         const newTeam = new Team(this.toholdrightfinal.name, this.toholdrightfinal.seed, this.toholdrightfinal.wins, this.toholdrightfinal.selected);
         this.toholdchampion = newTeam;
     }
+
+    this.toholdchampion.selected = true;
   }
 
     if (this.roundNumber == 6) {

@@ -79,7 +79,7 @@
     <!-- champion -->
     <div class="middle-set champion" *ngIf="roundNumber==6">
       <!-- Teams Left Final -->
-      <button class="team"(click)="selectTeam(champion)">
+      <button class="team" [class.selected]="champion.selected"(click)="selectTeam(champion)">
         {{ champion.name }}
       </button>
   
@@ -100,7 +100,7 @@
       <button class="round-button" *ngIf="roundNumber<5 || roundNumber==5" (click)="selecthalf()">
         {{ 'half' }}
       </button>
-      <button class="round-button" *ngIf="roundNumber==6" (click)="selecthalf()">
+      <button class="round-button" *ngIf="roundNumber==6" (click)="showFullBracket()">
         {{ 'show full ' }}
       </button>
       <button class="round-button" *ngIf="roundNumber==6" (click)="selecthalf()">
@@ -126,37 +126,37 @@
 <ng-container *ngIf="okafor">
   <div class="bracket">
     <!-- Left Side Teams -->
-    <div class="team-set teamsleft" *ngIf="roundNumber==0">
+    <div class="team-set teamsleft">
       <!-- Teams Left -->
-      <button class="team" [class.selected]="team.selected" *ngFor="let team of currteamleft" (click)="selectTeam(team)">
+      <button class="team" [class.selected]="team.selected" *ngFor="let team of toholdleft0" (click)="selectTeam(team)">
         {{ team.name }}
       </button>
     </div>
-    <div class="team-set teamsleft1" *ngIf="roundNumber==1">
+    <div class="team-set teamsleft1">
       <!-- Teams Left 1 -->
-      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamleft" (click)="selectTeam(team)">
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of toholdleft1" (click)="selectTeam(team)">
         {{ team.name }}
       </button>
     </div>
-    <div class="team-set teamsleft2" *ngIf="roundNumber==2">
+    <div class="team-set teamsleft2">
       <!-- Teams Left 2 -->
-      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamleft" (click)="selectTeam(team)">
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of toholdleft2" (click)="selectTeam(team)">
         {{ team.name }}
       </button>
     </div>
-    <div class="team-set teamsleft3" *ngIf="roundNumber==3">
+    <div class="team-set teamsleft3">
       <!-- Teams Left 3 -->
-      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamleft" (click)="selectTeam(team)">
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of toholdleft3" (click)="selectTeam(team)">
         {{ team.name }}
       </button>
     </div>
-    <div class="team-set teamsleft4" *ngIf="roundNumber==4">
+    <div class="team-set teamsleft4">
       <!-- Teams Left 4 -->
-      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamleft" (click)="selectTeam(team)">
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of toholdleft4" (click)="selectTeam(team)">
         {{ team.name }}
       </button>
     </div>
-    <div class="team-set teamsleftfinal" *ngIf="roundNumber==5">
+    <div class="team-set teamsleftfinal">
       <!-- Teams Left Final -->
       <button class="team" [class.selected]="teamsleftfinal.selected" (click)="selectTeam(teamsleftfinal)">
         {{ teamsleftfinal.name }}
@@ -164,37 +164,37 @@
     </div>
   
     <!-- Right Side Teams -->
-    <div class="team-set teamsright" *ngIf="roundNumber==0">
+    <div class="team-set teamsright">
       <!-- Teams Right -->
-      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamright" (click)="selectTeam(team)">
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of toholdright0" (click)="selectTeam(team)">
         {{ team.name }}
       </button>
     </div>
-    <div class="team-set teamsright1" *ngIf="roundNumber==1">
+    <div class="team-set teamsright1">
       <!-- Teams Right 1 -->
-      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamright" (click)="selectTeam(team)">
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of toholdright1" (click)="selectTeam(team)">
         {{ team.name }}
       </button>
     </div>
-    <div class="team-set teamsright2" *ngIf="roundNumber==2">
+    <div class="team-set teamsright2">
       <!-- Teams Right 2 -->
-      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamright" (click)="selectTeam(team)">
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of toholdright2" (click)="selectTeam(team)">
         {{ team.name }}
       </button>
     </div>
-    <div class="team-set teamsright3" *ngIf="roundNumber==3">
+    <div class="team-set teamsright3">
       <!-- Teams Right 3 -->
-      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamright" (click)="selectTeam(team)">
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of toholdright3" (click)="selectTeam(team)">
         {{ team.name }}
       </button>
     </div>
-    <div class="team-set teamsright4" *ngIf="roundNumber==4">
+    <div class="team-set teamsright4">
       <!-- Teams Right 4 -->
-      <button class="team" [class.selected]="team.selected"  *ngFor="let team of currteamright" (click)="selectTeam(team)">
+      <button class="team" [class.selected]="team.selected"  *ngFor="let team of toholdright4" (click)="selectTeam(team)">
         {{ team.name }}
       </button>
     </div>
-    <div class="team-set teamsrightfinal" *ngIf="roundNumber==5">
+    <div class="team-set teamsrightfinal">
       <!-- Teams Left Final -->
       <button class="team" [class.selected]="teamsrightfinal.selected" (click)="selectTeam(teamsrightfinal)">
         {{ teamsrightfinal.name }}
@@ -204,8 +204,8 @@
     <!-- champion -->
     <div class="middle-set champion" *ngIf="roundNumber==6">
       <!-- Teams Left Final -->
-      <button class="team"(click)="selectTeam(champion)">
-        {{ champion.name }}
+      <button class="team" [class.selected]="champion.selected"(click)="selectTeam(champion)">
+        {{ toholdchampion.name }}
       </button>
   
       
@@ -225,7 +225,7 @@
       <button class="round-button" *ngIf="roundNumber<5 || roundNumber==5" (click)="selecthalf()">
         {{ 'half' }}
       </button>
-      <button class="round-button" *ngIf="roundNumber==6" (click)="selecthalf()">
+      <button class="round-button" *ngIf="roundNumber==6" (click)="showFullBracket()">
         {{ 'show full ' }}
       </button>
       <button class="round-button" *ngIf="roundNumber==6" (click)="selecthalf()">
