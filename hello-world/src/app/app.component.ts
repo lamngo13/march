@@ -30,6 +30,7 @@ export class AppComponent {
   toholdright3: Team[] = [];
   toholdleft4: Team[] = [];
   toholdright4: Team[] = [];
+  okafor = false;
 
   showFull = false;
 
